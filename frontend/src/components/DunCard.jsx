@@ -6,10 +6,12 @@ import CardPageP3 from './CardPageP3.jsx';
 
 const PAGE_RENDERERS = { P1: CardPageP1, P2: CardPageP2, P3: CardPageP3 };
 
+const publicUrl = (path) => `${import.meta.env.BASE_URL}${path}`;
+
 const SCENE_BG = {
-  A: '/scenes/bg-a-storage.jpg',
-  B: '/scenes/bg-b-missing.jpg',
-  C: '/scenes/bg-c-editing.jpg',
+  A: publicUrl('scenes/bg-a-storage.jpg'),
+  B: publicUrl('scenes/bg-b-missing.jpg'),
+  C: publicUrl('scenes/bg-c-editing.jpg'),
 };
 
 function DouyinTab({ label, active, badge }) {
